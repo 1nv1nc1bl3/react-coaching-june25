@@ -14,6 +14,11 @@
     font-size: 25px;
     line-height: 30px;
 }
+.theClass .buttonsClass .resetBtn {
+    background-color: #0c1da8;
+    font-size: 18px;
+    color: #fff;
+}
 .buttonsClass {
     max-width: 600px;
     width: 100%;

@@ -1,6 +1,7 @@
 import { useState } from 'react'; // Βήμα 1: κάνε import το useState από τη React
+import CounterButton from './CounterButton';
 
-function App() {
+function Counter() {
     // Βήμα 2: Δημιουργείς ένα κομμάτι state
     // 'count' είναι η τρέχουσα τιμή
     // 'setCount' είναι η συνάρτηση που τη μεταβάλλει
@@ -30,14 +31,23 @@ function App() {
     return (
         <div className='theClass'>
             <h1>My Counter</h1>
-            <p>Count = {count}.</p>
+            <p>Count = {count}</p>
             <div className='buttonsClass'>
-                <button onClick={handlePlusClick}>➕</button>
-                <button onClick={handleMinusClick}>➖</button>
-                <button onClick={resetCount}>🔄</button>
+                <CounterButton label='➕' onBtnClick={handlePlusClick} />
+                <CounterButton label='➖' onBtnClick={handleMinusClick} />
+                <CounterButton
+                    singleButtonClass='resetBtn'
+                    label='RESET'
+                    onBtnClick={resetCount}
+                />
+                {/* <button onClick={handlePlusClick}>➕</button> */}
+                {/* <button onClick={handleMinusClick}>➖</button> */}
+                {/* <button className='resetBtn' onClick={resetCount}>
+                    RESET
+                </button> */}
             </div>
         </div>
     );
 }
 
-export default App;
+export default Counter;
