@@ -1,3 +1,27 @@
 * {
     /* margin: 0; */
 }
+.theClass {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+.theClass h1,
+.theClass p {
+    text-align: center;
+}
+.theClass p {
+    font-size: 25px;
+    line-height: 30px;
+}
+.buttonsClass {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 20px;
+}
+.buttonsClass button {
+    min-width: 120px;
+    height: 50px;
+}

@@ -6,31 +6,36 @@ function App() {
     // 'setCount' είναι η συνάρτηση που τη μεταβάλλει
     const [count, setCount] = useState(0); // Αρχική τιμή: 0
 
-    // Βήμα 3: Η συνάρτηση που αυξάνει το count
-    function handlePlusClick() {
-        setCount(count + 1);
-    }
-    function handleMinusClick() {
-        setCount(count - 1);
-    }
+    // Βήμα 3: Οι συναρτήσεις που μεταβάλλουν το count
+    const displayAlert = () => {
+        alert('Sorry, you reached the upper limit of the Counter!');
+    };
+    const handlePlusClick = () => {
+        if (count < 10) {
+            setCount(count + 1);
+        } else {
+            displayAlert();
+        }
+    };
+    const handleMinusClick = () => {
+        if (count > 0) {
+            setCount(count - 1);
+        }
+    };
     const resetCount = () => {
         setCount(0);
     };
 
     // Βήμα 4: Επιστρέφεις το UI
     return (
-        <div>
+        <div className='theClass'>
             <h1>My Counter</h1>
             <p>Count = {count}.</p>
-            <button onClick={handlePlusClick}>
-                Click for {'('}+{')'}
-            </button>
-            <br></br>
-            <button onClick={handleMinusClick}>
-                Click for {'('}-{')'}
-            </button>
-            <br></br>
-            <button onClick={resetCount}>Reset counter</button>
+            <div className='buttonsClass'>
+                <button onClick={handlePlusClick}>➕</button>
+                <button onClick={handleMinusClick}>➖</button>
+                <button onClick={resetCount}>🔄</button>
+            </div>
         </div>
     );
 }

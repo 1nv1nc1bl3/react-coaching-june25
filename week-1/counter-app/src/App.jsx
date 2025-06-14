@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Counter from './components/Counter';
 
@@ -10,6 +9,5 @@ function App() {
         </div>
     );
 }
-=======
->>>>>>> 33cd3b5cd112a16d38efe2b84a8ca72bec78fdac
 
+export default App;
