@@ -33,8 +33,17 @@ function Counter() {
             <h1>My Counter</h1>
             <p>Count = {count}</p>
             <div className='buttonsClass'>
-                <CounterButton label='➕' onBtnClick={handlePlusClick} />
-                <CounterButton label='➖' onBtnClick={handleMinusClick} />
+                <CounterButton
+                    singleButtonClass='plusBtn'
+                    label='➕'
+                    onBtnClick={handlePlusClick}
+                />
+                <CounterButton
+                    isDisabled={count === 0}
+                    singleButtonClass='minusBtn'
+                    label='➖'
+                    onBtnClick={handleMinusClick}
+                />
                 <CounterButton
                     singleButtonClass='resetBtn'
                     label='RESET'
